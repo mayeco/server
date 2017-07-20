@@ -19,6 +19,10 @@ sudo sh -c 'chmod +x /usr/bin/docker-compose'
 
 sudo usermod -aG docker $(whoami)
 
-sudo systemctl start docker
-
-sudo systemctl enable docker
+if which systemctl > /dev/null ; then
+  sudo systemctl start docker
+  sudo systemctl enable docker
+else
+  sudo update-rc.d docker defaults
+  sudo service docker restart
+fi
