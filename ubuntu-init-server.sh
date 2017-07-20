@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+sudo apt-get update --quiet --yes
+
 sudo apt-get remove docker docker-engine docker.io --quiet --yes
 
 sudo apt-get -y install linux-image-extra-$(uname -r) linux-image-extra-virtual apt-transport-https ca-certificates curl software-properties-common
