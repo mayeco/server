@@ -13,10 +13,10 @@ sudo apt-get update
 
 sudo apt-get install -y docker-ce
 
-sudo systemctl start docker
-
-sudo systemctl enable docker
-
 sudo sh -c 'curl -L https://github.com/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` > /usr/bin/docker-compose'
 
 sudo sh -c 'chmod +x /usr/bin/docker-compose'
+
+sudo systemctl start docker
+
+sudo systemctl enable docker
