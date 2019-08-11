@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-sudo yum remove -y docker docker-common container-selinux docker-selinux docker-engine docker-ce
+sudo yum remove -y container-selinux docker-selinux docker-ce
 
 sudo yum remove docker -y \
                   docker-client \
